@@ -115,7 +115,7 @@ section h3 {
 
 .projects-section > div {
     width: 80%;
-    max-width: 1280px;
+    max-width: 1024px;
     margin: 82px auto 0 auto;
     display: flex;
     align-items: center;
@@ -123,8 +123,8 @@ section h3 {
 }
 
 .projects-section > div .project{
-    width: 320px;
-    height: 320px;
+    width: 256px;
+    height: 256px;
     background-color: var(--primary-color);
     border-radius: 16px;
 }
@@ -301,7 +301,83 @@ section h3 {
 
 .tecnology-section {
     background-color: var(--third-color);
+    padding: 96px 0 128px 0;
 }
+
+.tecnology-section > div {
+    width: 80%;
+    max-width: 1024px;
+    margin: 0 auto;
+    text-align: center;
+    color: var(--primary-color-text);
+}
+
+.tecnology-section h4 {
+    font-size: 1.7rem;
+    text-align: start;
+}
+
+.tecnology-section h5 {
+    font-size: 1.3rem;
+}
+
+.tecnology-section .tecnologies-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 32px;
+}
+
+.tecnology-section .tecnologies-container .tech {
+    width: 224px;
+    height: 224px;
+    min-width: 224px;
+    min-height: 224px;
+    background-color: var(--primary-color);
+    border-radius: 16px;
+    margin: 24px 16px;
+}
+
+.tecnology-section .adicional-knowledge-container {
+    margin-top: 32px;
+    text-align: start;
+    padding: 16px 24px;
+}
+
+.tecnology-section .adicional-knowledge-container ul {
+    padding: 16px 8px;
+}
+
+.tecnology-section .adicional-knowledge-container ul li {
+    margin: 12px 0;
+}
+
+.tecnology-section .interessed-knowledge-container {
+    margin-top: 32px;
+    padding: 0 8px;
+}
+
+.tecnology-section .interessed-knowledge-container > div {
+    margin-top: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.tecnology-section .interessed-knowledge-container .interessed-knowledge {
+    margin: 16px 24px;
+    padding: 0 8px;
+}
+
+.tecnology-section .interessed-knowledge-container .interessed-knowledge ul {
+    padding: 16px 8px;
+}
+
+.tecnology-section .interessed-knowledge-container .interessed-knowledge ul li {
+    margin: 12px 0;
+}
+
+
 
 .tecnology-polygon-div {
     background-color: var(--third-color); 
