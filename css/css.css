@@ -1,0 +1,328 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    --primary-color: #101318;
+    --primary-color-text: ghostwhite;
+    --second-color: #2F3A4D;
+    --third-color: #253D63;
+    --fourth-color: #768CB0;
+    --cor-reserva: #33658A;
+}
+
+header {
+    width: 100%;
+    height: 64px;
+    padding: 0 24px;
+    background-color: var(--primary-color);
+    color: var(--primary-color-text);
+    border-bottom:1px solid;
+}
+
+header nav {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 100%;
+}
+
+header nav ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 50%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav ul li a {
+    cursor: pointer;
+}
+
+.portfolio-title-section {
+    height: 65vh;
+    display: flex;
+    align-items: center;
+    padding: 0 64px;
+    background-color: var(--primary-color);
+    color: var(--primary-color-text);
+}
+
+.portfolio-title-section div {
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.portfolio-title-section div div {
+    margin: 0 auto;
+}
+
+.portfolio-title-section h4 {
+    font-size: 2rem;
+    margin: 12px 0;
+}
+
+.portfolio-title-section h3 {
+    font-size: 3rem;
+}
+
+.polygon {
+    height: 80px;
+    position: relative;
+}
+
+.polygon-up::after {
+    position: absolute;
+    -webkit-clip-path: polygon(0% 100%, 50% 0%, 100% 100%);
+    clip-path: polygon(0% 100%, 50% 0%, 100% 100%);
+    content: "";
+    height: inherit;
+    width: 100%;
+}
+
+.polygon-down::after {
+    position: absolute;
+    -webkit-clip-path: polygon(0 0, 100% 0%, 50% 100%);
+    clip-path: polygon(0 0, 100% 0%, 50% 100%);
+    content: "";
+    height: inherit;
+    width: 100%;
+}
+
+.title-polygon-div {
+    background-color: var(--second-color);
+}
+
+.title-polygon-div::after {
+    background-color: var(--primary-color);
+}
+
+section h3 {
+    font-size: 2.3rem;
+}
+
+.projects-section {
+    background-color: var(--second-color);
+    color: var(--primary-color-text);
+    text-align: center;
+    padding: 168px 0 192px 0;
+}
+
+.projects-section > div {
+    width: 80%;
+    max-width: 1280px;
+    margin: 82px auto 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.projects-section > div .project{
+    width: 320px;
+    height: 320px;
+    background-color: var(--primary-color);
+    border-radius: 16px;
+}
+
+.projects-polygon-div {
+    background-color: var(--third-color);
+}
+
+.projects-polygon-div::after {
+    background-color: var(--second-color);
+}
+
+.whoiam-section {
+    color: var(--primary-color-text);
+    background-color: var(--third-color);
+    padding: 128px 0;
+}
+
+.whoiam-section > div {
+    width: 80%;
+    max-width: 1280px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.whoiam-section > div > div {
+    max-width: 1024px;
+    margin: 42px auto 0;
+    display: flex;
+    align-items: center;
+    text-align: start;
+}
+
+.whoiam-section > div > div img {
+    width: 256px;
+    height: 256px;
+    border-radius: 50%;
+    border: 5px solid var(--primary-color)
+}
+
+.whoiam-section > div > div p {
+    padding: 12px 48px;
+}
+
+.whoiam-polygon-div {
+    background-color: var(--fourth-color);
+}
+
+.whoiam-polygon-div::after {
+    background-color: var(--third-color)
+}
+
+.curriculum-section {
+    background-color: var(--fourth-color);
+    color: var(--second-color);
+    padding: 128px 0;
+}
+
+.curriculum-section > div {
+    width: 80%;
+    max-width: 1280px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.job-experience-container, .academic-experience-container  {
+    text-align: start;
+    max-width: 1024px;
+    margin: 32px auto;
+}
+
+.job-experience-container h4, .academic-experience-container h4 {
+    font-size: 1.7rem;
+}
+
+.academic-experience-container {
+    margin-top: 48px;
+}
+
+.timeline-xp {
+    list-style-type: none;
+    position: relative;
+    padding-left: 2.5rem;
+}
+
+.timeline-xp::before {
+    content: " ";
+    background: var(--cor-reserva);
+    display: inline-block;
+    position: absolute;
+    left: 16px;
+    width: 4px;
+    height: 100%;
+    z-index: 400;
+    border-radius: 1rem;
+    margin-top: 10px;
+}
+
+.timeline-xp-item {
+    margin: 24px 0;
+}
+
+.timeline-xp-item::before {
+    content: " ";
+    background: var(--third-color);
+    display: inline-block;
+    position: absolute;
+    margin-top: 8px;
+    left: 10px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    z-index: 400;
+}
+
+.timeline-xp-item .xp-company {
+    color: var(--third-color);
+    font-weight: 600;
+    font-size: 1.4rem;
+    margin: 10px 0;
+}
+
+.timeline-xp-item .xp-date {
+    color: var(--third-color);
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin: 6px 0;
+}
+
+.timeline-xp-item .xp-city, .timeline-xp-item .xp-function {
+    color: var(--third-color);
+    margin: 6px 0;
+    font-size: 1.2rem;
+}
+
+.timeline-xp-item article {
+    display: flex;
+}
+
+.timeline-xp-item article div {
+    width: 40%;
+}
+
+.timeline-xp-item article div.xp-description-div{
+    width: 60%;
+    font-size: 1.2rem;
+    margin-top: 8px;
+}
+
+.downloadCv-container {
+    text-align: center;
+    margin: 128px auto 0;
+}
+
+.downloadCv-container-btn {
+    padding: 16px 24px;
+    background-color: var(--primary-color);
+    color: var(--primary-color-text);
+    font-size: 1.1rem;
+    border: 0;
+    border-radius: 24px;
+    cursor: pointer;
+    text-transform: none;
+    text-decoration: none;
+}
+
+.curriculum-polygon-div {
+    background-color: var(--fourth-color); 
+}
+
+.curriculum-polygon-div::after {
+    background-color: var(--third-color);
+}
+
+.tecnology-section {
+    background-color: var(--third-color);
+}
+
+.tecnology-polygon-div {
+    background-color: var(--third-color); 
+}
+
+.tecnology-polygon-div::after {
+    background-color: var(--second-color);
+}
+
+.hobbies-section {
+    background-color: var(--second-color);
+}
+
+.hobbies-polygon-div {
+    background-color: var(--second-color); 
+}
+
+.hobbies-polygon-div::after {
+    background-color: var(--primary-color);
+}
+
+.contact-section {
+    background-color: var(--primary-color);
+}
