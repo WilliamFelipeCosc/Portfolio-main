@@ -11,13 +11,36 @@
     --cor-reserva: #33658A;
 }
 
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: var(--primary-color);
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: var(--second-color);
+    border-radius: 12px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--third-color);
+  }
+
 header {
     width: 100%;
     height: 64px;
     padding: 0 24px;
-    background-color: var(--primary-color);
+    background-color: #101318fd;
     color: var(--primary-color-text);
     border-bottom:1px solid;
+    position: sticky;
+    top: 0;
+    z-index: 999;
 }
 
 header nav {
@@ -377,8 +400,6 @@ section h3 {
     margin: 12px 0;
 }
 
-
-
 .tecnology-polygon-div {
     background-color: var(--third-color); 
 }
@@ -389,6 +410,61 @@ section h3 {
 
 .hobbies-section {
     background-color: var(--second-color);
+    padding: 80px 0 ;
+    color: var(--primary-color-text);
+}
+
+.hobbies-section > div {
+    max-width: 1024px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.hobbies-section div h3 {
+    text-align: center;
+}
+
+.hobbies-section article.hobbies {
+    display: flex;
+    flex-direction: column;
+    margin-top: 48px;
+}
+
+article.hobbies .hobby {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 48px 0;
+}
+
+article.hobbies .hobby.hobby-right {
+    flex-direction: row-reverse;
+    text-align: right;
+}
+
+.hobbies .hobby figure {
+    background-image: url(../dogpancudo.jpg);
+    width: 256px;
+    height: 256px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.hobbies .hobby div {
+    padding: 8px 32px;
+    width: calc(100% - 256px);
+}
+
+.hobbies .hobby div p {
+    text-align: justify; 
+}
+
+article.hobbies .hobby.hobby-right div p {
+    direction: rtl;
+}
+
+.hobbies .hobby div h4 {
+    font-size: 1.3rem;
+    margin-bottom: 24px;
 }
 
 .hobbies-polygon-div {
