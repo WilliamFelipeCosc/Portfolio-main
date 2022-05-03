@@ -12,24 +12,21 @@
 }
 
 ::-webkit-scrollbar {
-    width: 10px;
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
     background: var(--primary-color);
-  }
-  
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
+}
+
+::-webkit-scrollbar-thumb {
     background: var(--second-color);
     border-radius: 12px;
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
+}
+
+::-webkit-scrollbar-thumb:hover {
     background: var(--third-color);
-  }
+}
 
 header {
     width: 100%;
@@ -150,6 +147,11 @@ section h3 {
     height: 256px;
     background-color: var(--primary-color);
     border-radius: 16px;
+
+    /* ------------- Temporary ------------- */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .projects-polygon-div {
@@ -360,6 +362,11 @@ section h3 {
     background-color: var(--primary-color);
     border-radius: 16px;
     margin: 24px 16px;
+
+    /* ------------- Temporary ------------- */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .tecnology-section .adicional-knowledge-container {
@@ -477,4 +484,64 @@ article.hobbies .hobby.hobby-right div p {
 
 .contact-section {
     background-color: var(--primary-color);
+    color: var(--primary-color-text);
+    padding: 80px 0;
+}
+
+.contact-section h3 {
+    text-align: center;
+}
+
+.contact-section article {
+    margin: 32px auto 0;
+    width: 80%;
+    max-width: 1024px;
+    text-align: center;
+     display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap; display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.tecnology-section .tecnologies-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 32px;
+}
+
+.contact-section article div {
+    width: 224px;
+    height: 224px;
+    min-width: 224px;
+    min-height: 224px;
+    background-color: var(--third-color);
+    border-radius: 16px;
+    margin: 24px 16px;
+
+    /* ------------- Temporary ------------- */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--primary-color-text);
+    text-align: center;
+    border-top: var(--primary-color-text) 1px solid;
+    height: 64px;
+    font-weight: 600;
+    position: relative;
+}
+
+footer p {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
 }
