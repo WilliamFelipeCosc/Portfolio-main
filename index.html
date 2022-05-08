@@ -4,26 +4,43 @@
         <title>Portfólio | William Coscodai</title>
         <link rel="stylesheet" href="css/css.css">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <script>
+        <script defer>
             function scrollToElem(where){
                 document.getElementsByClassName(where)[0].scrollIntoView({
                     behavior: 'smooth'
                 });   
             }
+
+            function mobileButton(){
+                const header = document.getElementById('header');
+                console.log(header.getAttribute('data-mobile'));
+
+                if(header.getAttribute('data-mobile') == 'false'){
+                    header.setAttribute('data-mobile', true) ;
+                }else if(header.getAttribute('data-mobile') == 'true'){
+                    header.setAttribute('data-mobile', false) ;
+                }  
+            }
         </script>
     </head>
     <body>
-        <header>
+        <header id="header" data-mobile='false'> 
+            <div>
+                <button onclick="mobileButton()">
+                    <img src="assets/icons/menu_icon.svg" ></img>
+                </button>
+            </div>
             <nav>
                 <ul>
                     <li onclick="scrollToElem('projects-section')"><a>Projetos</a></li>
                     <li onclick="scrollToElem('whoiam-section')"><a>Quem Sou</a></li>
-                    <li onclick="scrollToElem('curriculum-section')"><a>Curriculo</a></li>
+                    <li onclick="scrollToElem('curriculum-section')"><a>Currículo</a></li>
                     <li onclick="scrollToElem('tecnology-section')"><a>Tecnologias</a></li>
                     <li onclick="scrollToElem('hobbies-section')"><a>Hobbies</a></li>
                     <li onclick="scrollToElem('contact-section')"><a>Contato</a></li>
-                </ul>
+                </ul>      
             </nav> 
+            
         </header>
         <main>
             <section class="portfolio-title-section">
@@ -209,11 +226,13 @@
                     </div>
                     <div class="adicional-knowledge-container">
                         <h4>Conhecimento adicional</h4>
-                        <ul>
-                            <li>Conhecimento 1</li>
-                            <li>Conhecimento 2</li>
-                            <li>Conhecimento 3</li>
-                        </ul>
+                        <div>
+                            <ul>
+                                <li>Conhecimento 1</li>
+                                <li>Conhecimento 2</li>
+                                <li>Conhecimento 3</li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="interessed-knowledge-container">
                         <h4>Quero aprender</h4>

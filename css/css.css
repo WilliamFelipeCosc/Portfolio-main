@@ -28,6 +28,10 @@
     background: var(--third-color);
 }
 
+body {
+    background-color: var(--primary-color);
+}
+
 header {
     width: 100%;
     height: 64px;
@@ -39,6 +43,10 @@ header {
     top: 0;
     z-index: 999;
     overflow: hidden;
+}
+
+header div {
+    display: none;
 }
 
 header nav {
@@ -56,7 +64,7 @@ header nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    width: 50%;
+    min-width: 650px;
     justify-content: space-between;
     align-items: center;
 }
@@ -151,7 +159,7 @@ section h3 {
     background-color: var(--primary-color);
     border-radius: 16px;
     position: relative;
-    margin: 16px 0;
+    margin: 16px;
 
     /* ------------- Temporary ------------- */
     display: flex;
@@ -322,7 +330,7 @@ section h3 {
 
 .timeline-xp-item article div {
     width: 40%;
-    min-width: 268px;
+    min-width: 312px;
 }
 
 .timeline-xp-item article div.xp-description-div{
@@ -434,7 +442,11 @@ section h3 {
 .tecnology-section .adicional-knowledge-container {
     margin-top: 32px;
     text-align: start;
-    padding: 16px 24px;
+    padding: 16px;
+}
+
+.tecnology-section .adicional-knowledge-container div {
+    padding: 0 8px;
 }
 
 .tecnology-section .adicional-knowledge-container ul {
@@ -447,7 +459,7 @@ section h3 {
 
 .tecnology-section .interessed-knowledge-container {
     margin-top: 32px;
-    padding: 0 8px;
+    padding: 0 12px;
 }
 
 .tecnology-section .interessed-knowledge-container > div {
@@ -610,8 +622,65 @@ footer p {
 }
 
 @media screen and (max-width: 768px ) {
+
+    header {
+        position: fixed;
+        transition: 0.6s height ease-out;
+    }
+
+    header div {
+        width: 100%;
+        height: 64px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
     header nav  {
        width: 0;
+       height: 0;
+       justify-content: center;
+       font-weight: 600;
+       transition: 0.6s height ease-out;
+    }
+
+    header button {
+        margin-left: auto;
+        height: 45px;
+        width: 45px;
+        background: transparent;
+        border: none;
+        color: var(--primary-color-text);
+    }
+
+    header[data-mobile=true] {
+        height:80%;
+        opacity: 0.9;
+    }
+
+    header[data-mobile=true] > button {
+        top:24px
+    }
+
+    header[data-mobile=true] > nav {
+        height: 100%;
+        width: 100%;
+        margin-top: 20px;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    header[data-mobile=true] > nav > ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    header[data-mobile=true] > nav > ul li {
+        margin: 16px 0;
+    }
+
+    main {
+        padding-top: 64px;
     }
 
     .projects-section > div {
@@ -635,6 +704,11 @@ footer p {
         justify-content: center;
     }
 
+    .tecnology-section .adicional-knowledge-container div {
+        width: 70%;
+        margin: 0 auto;
+    }
+
     .hobbies-section article.hobbies {
         align-items: center;
     }
@@ -656,5 +730,11 @@ footer p {
 
     article.hobbies .hobby.hobby-right div p {
         direction: ltr;
+    }
+}
+
+@media screen and (max-width: 424px ) {
+    .timeline-xp-item article div {
+        min-width: 224px;
     }
 }
