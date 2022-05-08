@@ -39,7 +39,8 @@ header {
     background-color: #101318fd;
     color: var(--primary-color-text);
     border-bottom:1px solid;
-    position: sticky;
+    position: -webkit-sticky;
+    position: sticky; 
     top: 0;
     z-index: 999;
     overflow: hidden;
@@ -466,13 +467,13 @@ section h3 {
 .tecnology-section .interessed-knowledge-container > div {
     margin-top: 24px;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
     flex-wrap:wrap ;
 }
 
 .tecnology-section .interessed-knowledge-container .interessed-knowledge {
-    margin: 16px 24px;
+    margin: 8px 4px;
     padding: 0 8px;
 }
 
@@ -683,6 +684,18 @@ footer p {
         padding-top: 64px;
     }
 
+    .portfolio-title-section {
+        padding: 0 32px;
+    }
+
+    .portfolio-title-section h4 {
+        font-size: 1.7rem;
+    }
+    
+    .portfolio-title-section h3 {
+        font-size: 2.7rem;
+    }
+
     .projects-section > div {
         justify-content: center;
     }
@@ -692,9 +705,13 @@ footer p {
         justify-content: center;
     }
 
-    .tecnology-section .adicional-knowledge-container {
-        text-align: center;
+    .whoiam-section > div > div p {
+        padding: 12px 24px;
     }
+
+    /* .tecnology-section .adicional-knowledge-container {
+        text-align: center;
+    } */
 
     .tecnology-section h4 {
         text-align: center;
@@ -734,6 +751,7 @@ footer p {
 }
 
 @media screen and (max-width: 424px ) {
+
     .timeline-xp-item article div {
         min-width: 224px;
     }
