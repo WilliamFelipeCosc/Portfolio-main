@@ -38,6 +38,7 @@ header {
     position: sticky;
     top: 0;
     z-index: 999;
+    overflow: hidden;
 }
 
 header nav {
@@ -47,6 +48,7 @@ header nav {
     align-items: center;
     justify-content: flex-end;
     height: 100%;
+    overflow: hidden;
 }
 
 header nav ul {
@@ -138,6 +140,7 @@ section h3 {
     max-width: 1024px;
     margin: 82px auto 0 auto;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
 }
@@ -148,6 +151,7 @@ section h3 {
     background-color: var(--primary-color);
     border-radius: 16px;
     position: relative;
+    margin: 16px 0;
 
     /* ------------- Temporary ------------- */
     display: flex;
@@ -211,11 +215,13 @@ section h3 {
     width: 256px;
     height: 256px;
     border-radius: 50%;
-    border: 5px solid var(--primary-color)
+    border: 5px solid var(--primary-color);
+    margin: 16px 0;
 }
 
 .whoiam-section > div > div p {
     padding: 12px 48px;
+    text-align: justify;
 }
 
 .whoiam-polygon-div {
@@ -311,16 +317,19 @@ section h3 {
 
 .timeline-xp-item article {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .timeline-xp-item article div {
     width: 40%;
+    min-width: 268px;
 }
 
 .timeline-xp-item article div.xp-description-div{
     width: 60%;
     font-size: 1.2rem;
     margin-top: 8px;
+    text-align: justify;
 }
 
 .downloadCv-container {
@@ -446,7 +455,9 @@ section h3 {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap:wrap ;
 }
+
 .tecnology-section .interessed-knowledge-container .interessed-knowledge {
     margin: 16px 24px;
     padding: 0 8px;
@@ -512,6 +523,7 @@ article.hobbies .hobby.hobby-right {
 .hobbies .hobby div {
     padding: 8px 32px;
     width: calc(100% - 256px);
+    min-width: 256px;
 }
 
 .hobbies .hobby div p {
@@ -595,4 +607,54 @@ footer p {
     transform: translate(-50%, -50%);
     top: 50%;
     left: 50%;
+}
+
+@media screen and (max-width: 768px ) {
+    header nav  {
+       width: 0;
+    }
+
+    .projects-section > div {
+        justify-content: center;
+    }
+
+    .whoiam-section > div > div {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .tecnology-section .adicional-knowledge-container {
+        text-align: center;
+    }
+
+    .tecnology-section h4 {
+        text-align: center;
+    }
+
+    .tecnology-section .interessed-knowledge-container > div {
+        justify-content: center;
+    }
+
+    .hobbies-section article.hobbies {
+        align-items: center;
+    }
+
+    article.hobbies .hobby {
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .hobbies .hobby div {
+        margin-top: 16px;
+    }
+
+    article.hobbies .hobby.hobby-right {
+        flex-direction: row;
+        text-align: center;
+    }
+
+    article.hobbies .hobby.hobby-right div p {
+        direction: ltr;
+    }
 }
