@@ -3,17 +3,24 @@
     <head lang="pt-br">
         <title>Portfólio | William Coscodai</title>
         <link rel="stylesheet" href="css/css.css">
+        <script>
+            function scrollToElem(where){
+                document.getElementsByClassName(where)[0].scrollIntoView({
+                    behavior: 'smooth'
+                });   
+            }
+        </script>
     </head>
     <body>
         <header>
             <nav>
                 <ul>
-                    <li><a>Projetos</a></li>
-                    <li><a>Quem Sou</a></li>
-                    <li><a>Curriculo</a></li>
-                    <li><a>Tecnologias</a></li>
-                    <li><a>Hobbies</a></li>
-                    <li><a>Contato</a></li>
+                    <li onclick="scrollToElem('projects-section')"><a>Projetos</a></li>
+                    <li onclick="scrollToElem('whoiam-section')"><a>Quem Sou</a></li>
+                    <li onclick="scrollToElem('curriculum-section')"><a>Curriculo</a></li>
+                    <li onclick="scrollToElem('tecnology-section')"><a>Tecnologias</a></li>
+                    <li onclick="scrollToElem('hobbies-section')"><a>Hobbies</a></li>
+                    <li onclick="scrollToElem('contact-section')"><a>Contato</a></li>
                 </ul>
             </nav> 
         </header>
@@ -69,7 +76,7 @@
                 </div>
             </section>
             <div class="polygon polygon-down whoiam-polygon-div"></div>
-            <section class="curriculum-section">
+            <section class="curriculum-section" id="curriculum-section">
                 <div>
                     <h3>Currículo</h3>
                     <div class="job-experience-container">
