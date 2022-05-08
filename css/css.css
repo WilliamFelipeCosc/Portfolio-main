@@ -130,7 +130,7 @@ section h3 {
     background-color: var(--second-color);
     color: var(--primary-color-text);
     text-align: center;
-    padding: 168px 0 192px 0;
+    padding: 128px 0 148px 0;
 }
 
 .projects-section > div {
@@ -147,11 +147,31 @@ section h3 {
     height: 256px;
     background-color: var(--primary-color);
     border-radius: 16px;
+    position: relative;
 
     /* ------------- Temporary ------------- */
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.projects-section > div .project .display {
+    height: 0;
+    transition: all 0.5s ease-out;
+    background-color: #101318be;
+    overflow: hidden;
+    position: absolute;
+    border-radius: 16px;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+}
+
+.projects-section > div .project:hover > .display {
+    height: 100%;
 }
 
 .projects-polygon-div {
@@ -362,11 +382,36 @@ section h3 {
     background-color: var(--primary-color);
     border-radius: 16px;
     margin: 24px 16px;
+    position: relative;
 
     /* ------------- Temporary ------------- */
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.tecnology-section .tecnologies-container .tech img {
+    width: 60%;
+    height: 70%;
+}
+
+.tecnology-section .tecnologies-container .tech .display {
+    height: 0;
+    transition: all 0.5s ease-out;
+    background-color: #101318be;
+    overflow: hidden;
+    position: absolute;
+    border-radius: 16px;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+}
+
+.tecnology-section .tecnologies-container .tech:hover > .display {
+    height: 100%;
 }
 
 .tecnology-section .adicional-knowledge-container {
@@ -449,7 +494,7 @@ article.hobbies .hobby.hobby-right {
 }
 
 .hobbies .hobby figure {
-    background-image: url(../dogpancudo.jpg);
+    background-image: url(../assets/images/dogpancudo.jpg);
     width: 256px;
     height: 256px;
     background-repeat: no-repeat;
@@ -515,10 +560,8 @@ article.hobbies .hobby.hobby-right div p {
 }
 
 .contact-section article div {
-    width: 224px;
-    height: 224px;
-    min-width: 224px;
-    min-height: 224px;
+    width: 156px;
+    height: 156px;
     background-color: var(--third-color);
     border-radius: 16px;
     margin: 24px 16px;
