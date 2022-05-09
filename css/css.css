@@ -534,8 +534,8 @@ article.hobbies .hobby.hobby-right {
 
 .hobbies .hobby figure {
     background-image: url(../assets/images/dogpancudo.jpg);
-    width: 286px;
-    height: 285px;
+    width: 296px;
+    height: 312px;
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 12px;
@@ -543,7 +543,7 @@ article.hobbies .hobby.hobby-right {
 
 .hobbies .hobby div {
     padding: 24px 32px;
-    width: calc(100% - 286px);
+    width: calc(100% - 296px);
     min-width: 256px;
     background: linear-gradient(56deg, #2F3A4D, 65%, #253D63);
     border-radius: 12px;
