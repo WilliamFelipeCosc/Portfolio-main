@@ -453,6 +453,11 @@ section h3 {
 
 .tecnology-section .adicional-knowledge-container ul {
     padding: 16px 8px;
+    max-height: 320px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: space-between;
 }
 
 .tecnology-section .adicional-knowledge-container ul li {
@@ -519,6 +524,7 @@ article.hobbies .hobby {
     display: flex;
     flex-wrap: wrap;
     margin: 48px 0;
+    box-shadow: 1px 1px 10px;
 }
 
 article.hobbies .hobby.hobby-right {
@@ -535,9 +541,10 @@ article.hobbies .hobby.hobby-right {
 }
 
 .hobbies .hobby div {
-    padding: 8px 32px;
+    padding: 24px 32px;
     width: calc(100% - 256px);
     min-width: 256px;
+    background: linear-gradient(45deg, #33658A, #253D63);
 }
 
 .hobbies .hobby div p {
@@ -598,12 +605,56 @@ article.hobbies .hobby.hobby-right div p {
     height: 156px;
     background-color: var(--third-color);
     border-radius: 16px;
-    margin: 24px 16px;
+    margin: 24px 16px 0;
+    cursor: pointer;
+    position: relative;
 
     /* ------------- Temporary ------------- */
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.contact-section article div a {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    color: var(--primary-color-text);
+}
+
+.contact-section article div img {
+    width: 60%;
+    height: 60%;
+}
+
+.contact-section article div .display {
+    height: 0;
+    transition: all 0.5s ease-out;
+    background-color: #101318be;
+    overflow: hidden;
+    position: absolute;
+    border-radius: 16px;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    
+}
+
+.contact-section article > div:hover {
+    border: 3px solid var(--cor-reserva);
+}
+
+.contact-section article div:hover .display {
+    height: 100%;
+    padding: 8px;
 }
 
 footer {
@@ -717,6 +768,11 @@ footer p {
         text-align: center;
     }
 
+    .tecnology-section .adicional-knowledge-container ul {
+        max-height: -moz-fit-content;
+        max-height: fit-content;
+    }
+
     .tecnology-section .interessed-knowledge-container > div {
         justify-content: center;
     }
@@ -734,10 +790,12 @@ footer p {
         align-items: center;
         justify-content: center;
         text-align: center;
+        box-shadow: none;
     }
 
     .hobbies .hobby div {
         margin-top: 16px;
+        background: none;
     }
 
     article.hobbies .hobby.hobby-right {

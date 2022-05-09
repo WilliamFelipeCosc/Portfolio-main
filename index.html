@@ -3,6 +3,10 @@
     <head >
         <meta charset="utf-8">
         <title>Portfólio | William Coscodai</title>
+        <meta name="author" content="William Felipe Coscodai">
+        <meta name="description" content="Meu Portfólio">
+        <meta http-equiv="content-language" content="pt-br" />
+        <!-- <link rel="icon" href="http://example.com/favicon.png"> -->
         <link rel="stylesheet" href="css/css.css">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <script defer>
@@ -21,6 +25,9 @@
                 }else if(header.getAttribute('data-mobile') == 'true'){
                     header.setAttribute('data-mobile', false) ;
                 }  
+            }
+            function copyEmail(){
+                navigator.clipboard.writeText("will25felipe@gmail.com")
             }
         </script>
     </head>
@@ -233,6 +240,7 @@
                                 <li>Rest API</li>
                                 <li>JQuery</li>
                                 <li>GIT/GITHUB</li>
+                                <li>Desenvolvimento Responsivo</li>
                                 <li>Bootstrap</li>
                                 <li>MaterialUI</li>
                                 <li>Styled Components</li>
@@ -252,6 +260,7 @@
                                 <h5>Desenvolvimento</h5>
                                 <ul>
                                     <li>NextJs</li>
+                                    <li>React Native</li>
                                     <li>AngularJs</li>
                                     <li>VueJs</li>
                                     <li>NestJs</li>
@@ -324,10 +333,23 @@
             <section class="contact-section">
                 <h3>Contato</h3>
                 <article>
-                    <div>LinkedIn</div>
-                    <div>Github</div>
-                    <div>EMEIO</div>
-                    <div>Alguma Coisa</div>
+                    <div>
+                        <a href="https://www.linkedin.com/in/william-coscodai-171784226/" rel="noopener" target="_blank">
+                            <img src="assets/images/contact/linkedin.svg" alt="My Linkedin">
+                            <div class="display">Clique para ir até meu linkedin</div>
+                        </a> 
+                        
+                    </div>
+                    <div>
+                        <a href="https://github.com/WilliamFelipeCosc" rel="noopener" target="_blank">
+                            <img src="assets/images/contact/GitHub.svg" alt="My GitHub">
+                            <div class="display">Clique para ir até meu GitHub</div>
+                        </a>
+                    </div>
+                    <div onclick="copyEmail()">
+                        <img src="assets/images/contact/gmail.svg" alt="My E-mail">
+                        <div class="display">Clique para copiar meu endereço de E-mail</div>
+                    </div>
                 </article>
             </section>
             <footer><p>2022 - Todos Direitos Reservados</p></footer>
