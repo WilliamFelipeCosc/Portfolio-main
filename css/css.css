@@ -566,7 +566,7 @@ article.hobbies .hobby.hobby-right {
 }
 
 article.hobbies .hobby.hobby-right div p {
-    direction: rtl;
+    text-align: right;
 }
 
 .hobbies .hobby div h4 {
@@ -807,7 +807,11 @@ footer p {
         box-shadow: none;
     }
 
-    .hobbies .hobby div {
+    article.hobbies .hobby figure, .hobbies .hobby.hobby-right figure {
+        border-radius: 16px;
+    }
+
+    .hobbies .hobby div, .hobbies .hobby.hobby-right div {
         margin-top: 16px;
         background: none;
     }
