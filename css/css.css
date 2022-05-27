@@ -631,8 +631,6 @@ article.hobbies .hobby.hobby-right div p {
     margin: 24px 16px 0;
     cursor: pointer;
     position: relative;
-
-    /* ------------- Temporary ------------- */
     display: flex;
     align-items: center;
     justify-content: center;
