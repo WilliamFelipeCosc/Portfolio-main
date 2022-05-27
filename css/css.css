@@ -537,16 +537,25 @@ article.hobbies .hobby.hobby-right {
     width: 296px;
     height: 312px;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100% 100%;
     border-top-left-radius: 12px;
     border-bottom-left-radius: 12px;
 }
 
+.hobbies .hobby.guitar figure {
+    background-image: url(../assets/images/guitarra.jpg);
+}
+
 .hobbies .hobby.hobby-right figure {
+    background-image: url(../assets/images/livro.jpg);
     border-top-left-radius: 0px;
     border-bottom-left-radius: 0px;
     border-top-right-radius: 12px;
     border-bottom-right-radius: 12px;
+}
+
+.hobbies .hobby.games figure {
+    background-image: url(../assets/images/darksouls.webp);
 }
 
 .hobbies .hobby div {
